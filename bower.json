@@ -1,0 +1,22 @@
+{
+  "name": "asvirtualizador",
+  "description": "Laboratorio de Desarrollo de Software project",
+  "main": "src/index.html",
+  "authors": [
+    "Moises Berenguer <moises.berenguer@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Dashboard;",
+    "Virtualizador;"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

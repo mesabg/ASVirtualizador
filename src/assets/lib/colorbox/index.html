@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title></title>
+  <link href="colorbox.css" rel="stylesheet">
+  <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
+  <![endif]-->
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+<style>
+  #map { position:absolute; top:0; bottom:0; right:300px; left:0; }
+  #info {
+      position:absolute; top: 0; right: 0;
+      bottom: 0; width: 260px; background:#333; color: #fff;
+      padding:20px;
+  }
+  h1 { margin-top:0; }
+</style>
+
+<div id='map'></div>
+<div id='info'></div>
+
+<script>
+var map = L.mapbox.map('map', 'examples.map-20v6611k')
+    .setView([37.9, -77], 6);
+
+var geoJson = [{
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [-77, 37.9]
+        },
+        properties: {
+            url: 'http://mapsforgood.org/360/Valle%20Furioso/',
+            'marker-color': '#CC0033'
+        }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [-78, 36.5]
+        },
+        properties: {
+            url: 'http://mapsforgood.org/360/Cerro%20Torres/',
+            'marker-color': '#0099ff'
+        }
+    }];
+
+map.markerLayer.setGeoJSON(geoJson);
+map.markerLayer.eachLayer(function(layer) {
+    layer.unbindPopup();
+});
+// Listen for individual marker clicks
+map.markerLayer.on('click',function(e) {
+    $.colorbox({
+        iframe: true,
+        href: e.layer.feature.properties.url,
+        width: 700,
+        height: 300
+    });
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="jquery.colorbox-min.js"></script>
+</body>
+</html>

@@ -19,9 +19,28 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "assets/css/bootstrap.min.css",
+        "assets/lib/font-awesome/4.5.0/css/font-awesome.min.css",
+        "assets/css/fonts.googleapis.com.css",
+        "assets/css/ace.min.css",
+        "assets/css/ace-skins.min.css",
+        "assets/css/ace-rtl.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/js/ace-extra.min.js",
+        "assets/js/jquery-2.1.4.min.js",
+        "assets/js/bootstrap.min.js",
+        "assets/js/jquery-ui.custom.min.js",
+        "assets/js/jquery.ui.touch-punch.min.js",
+        "assets/js/jquery.easypiechart.min.js",
+        "assets/js/jquery.sparkline.index.min.js",
+        "assets/js/jquery.flot.min.js",
+        "assets/js/jquery.flot.pie.min.js",
+        "assets/js/jquery.flot.resize.min.js",
+        "assets/js/ace-elements.min.js",
+        "assets/js/ace.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
