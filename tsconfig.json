@@ -15,6 +15,21 @@
     "lib": [
       "es2016",
       "dom"
-    ]
+    ],
+    "paths":{
+      //-- Enviroments
+      "@environments": ["./environments/environment"],
+
+      //-- Ms Stuff (Global)
+      "@ms/components": ["./@ms/components"],
+      "@ms/api": ["./@ms/api"],
+      "@ms/directives": ["./@ms/directives"],
+
+      //-- App dedicated stuff
+      "@interfaces": ["./app/@interfaces"],
+      "@pages": ["./app/@pages"],
+      "@services": ["./app/@services"],
+      "@api": ["./app/@api"]
+    }
   }
 }

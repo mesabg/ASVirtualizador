@@ -1,0 +1,1 @@
+export { ProgramasComponent as ProgramasPage } from './programas.component';

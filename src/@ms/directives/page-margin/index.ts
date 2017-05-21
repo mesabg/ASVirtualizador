@@ -1,0 +1,1 @@
+export { PageMarginDirective } from './page-margin.directive';

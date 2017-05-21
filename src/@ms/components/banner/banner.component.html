@@ -1,0 +1,13 @@
+<section id="ms-banner">
+	<hr />
+	<div class="jumbotron">
+		<div *ngIf="banner" [attr.style]="banner.style" [attr.class]="banner.classes">
+			<h1><strong>{{banner.title}}</strong></h1>
+			<p class="lead">{{banner.text.main}}</p>
+			<hr class="my-4" *ngIf="banner.separator">
+			<p>{{banner.text.secondary}}</p>
+			<div [innerHTML]="banner.innerHTML"></div>
+		</div>
+	</div>
+	<hr />
+</section>

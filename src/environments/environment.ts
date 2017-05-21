@@ -4,5 +4,11 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+	production: false,
+	API:{
+		BASE: "http://127.0.0.1:8000/Virtualizacion/api_rest/",
+		URL: function(){
+			return environment.API.BASE;
+		}
+	}
 };

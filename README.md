@@ -26,3 +26,14 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+##Instrucciones para uso
+
+1. Colocar la carpeta ASVirtualizador dentro del directorio htdocs de algún servidor, puede ser apache o cualquier otro
+2. Iniciar el navegador e ir a la url `http://localhost:puerto/ASVirtualizador`
+3. Empezar a navegar
+
+##Instrucciones de funcionamiento
+
+1. La ruta `/iniciar-sesion` contiene el login del site
+2. La ruta `/admin` contiene el administrador (layout administrador). Adentro hay varias subrutas dependiendo de la funcionalidad. NOTA: Usar el sidebar y menús para la navegación interna.

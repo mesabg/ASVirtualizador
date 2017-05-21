@@ -1,0 +1,1 @@
+export { _404Component as NotFoundPage } from './404.component';

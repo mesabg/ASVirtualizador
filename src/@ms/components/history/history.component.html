@@ -1,0 +1,8 @@
+<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+	<ul id="history" class="breadcrumb">
+		<li *ngFor="let history of histories;">
+			<i class="ace-icon fa {{history.icon}}"></i>
+			<a href="{{history.url}}">{{history.title}}</a>
+		</li>
+	</ul>
+</div>

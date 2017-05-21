@@ -1,0 +1,25 @@
+<div *ngIf="item.menus == undefined || item.menus.length == 0; then thenBlock else elseBlock"></div>
+<!--Just One Item-->
+<ng-template #thenBlock>
+	<a href="{{item.ref}}">
+		<i class="menu-icon fa {{item.icon}}"></i>
+		<span class="menu-text"> {{item.title}} </span>
+	</a>
+	<b class="arrow"></b>
+</ng-template>
+<!--Just One Item Ends-->
+<!--SubMenus-->
+<ng-template #elseBlock>
+	<a href="#" class="dropdown-toggle">
+		<i class="menu-icon fa {{item.icon}}"></i>
+		<span class="menu-text">
+			{{item.title}}
+		</span>
+		<b class="arrow fa fa-angle-down"></b>
+	</a>
+	<b class="arrow"></b>
+	<ul class="submenu">
+		<li ms-sidebar-item *ngFor="let item of item.menus;" [item]="item" [class.active]="item.active"></li>
+	</ul>
+</ng-template>
+<!--SubMenus End-->

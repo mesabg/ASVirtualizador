@@ -1,0 +1,1 @@
+export { History as MsHistory } from './history.interface';

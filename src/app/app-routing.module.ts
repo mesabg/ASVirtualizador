@@ -1,30 +1,38 @@
+/**
+ * Global Imports
+ */
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-/*
-Importing Pages
+/**
+ * Local Imports
  */
-import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
-import { _404Component } from './pages/404/404.component';
-
-const routes: Routes = [
-	{
-		path: '',
-		children: [
-			{path: '', redirectTo: 'inicio', pathMatch: 'full'},
-			{path: 'inicio', component: HomeComponent},
-			{path: 'iniciarsesion', component: LoginComponent},
-			{path: '**', component: _404Component}
-		]
-	}
-];
+import { PagesModule } from '@pages';
+import { HomePage, LoginPage, NotFoundPage } from '@pages';
 
 /**
- * [NgModule description]
+ * Routes definition
+ */
+const routes: Routes = [{
+	path: '',
+	children: [
+		{path: '', redirectTo: 'iniciar-sesion', pathMatch: 'full'},
+		{path: 'inicio', component: HomePage},
+		{path: 'iniciar-sesion', component: LoginPage},
+		{path: '**', component: NotFoundPage}
+	]
+}];
+
+/**
+ * [Routing Module description]
  */
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
-  exports: [RouterModule]
+	imports: [
+		PagesModule,
+		RouterModule.forRoot(routes, {useHash: true})
+	],
+	exports: [
+		RouterModule
+	]
 })
 export class AppRoutingModule { }

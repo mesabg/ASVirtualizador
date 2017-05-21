@@ -20,6 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.scss",
+
         "assets/css/bootstrap.min.css",
         "assets/lib/font-awesome/4.5.0/css/font-awesome.min.css",
         "assets/css/fonts.googleapis.com.css",
@@ -39,7 +40,9 @@
         "assets/js/jquery.flot.pie.min.js",
         "assets/js/jquery.flot.resize.min.js",
         "assets/js/ace-elements.min.js",
-        "assets/js/ace.min.js"
+        "assets/js/ace.min.js",
+        "assets/js/jquery.mask.min.js"
+
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
